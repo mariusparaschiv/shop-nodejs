@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
+</head>
+
+<body>
+    <div id="shop">
+        <aside id="sidebar">
+            <div class="other">
+                <h2>Loyout</h2>
+                <p>
+                    <label for="">Display</label>
+                    <select name="displayType" onchange="sidebar.handleChange(event)">
+                        <option value="grid">grid</option>
+                        <option value="list">list</option>
+                    </select>
+                </p>
+            </div>
+            <div class="filters">
+                <h2>Filtres</h2>
+                <p>
+                        <label for="">Sort</label>
+                        <select name="sort" onchange="sidebar.handleChange(event)">
+                            <option value="asc">asc</option>
+                            <option value="desc">desc</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="">Min Price</label>
+                        <input type="number" name="minPrice" onblur="sidebar.handleChange(event)" />
+                    </p>
+                    <p>
+                        <label for="">Max Price</label>
+                        <input type="number" name="maxPrice" onblur="sidebar.handleChange(event)" />
+                    </p>
+                    <p>
+                        <label for="">Name</label>
+                        <input type="text" name="productName" onblur="sidebar.handleChange(event)" />
+                    </p>
+            </div>
+            <div class="filters">
+                <h2>Paginations</h2>
+                <p>
+                    <label for="">Limit</label>
+                    <select name="limit" onchange="sidebar.handleChange(event)">
+                        <option value="10">10</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="500">500</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="">Page</label>
+                    <input type="number" name="page" onblur="sidebar.handleChange(event)" />
+                </p>
+            </div>
+        </aside>
+        <main id="products"></main>
+    </div>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>
