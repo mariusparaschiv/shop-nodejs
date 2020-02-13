@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+
+#shop {
+    display: flex;
+    position: relative;
+}
+
+#sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 15px;
+    background-color: #eee;
+}
+
+#products {
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#products .product {
+    width: calc(100% / 2);
+    padding: 15px;
+}
+
+#products .product img {
+  max-width: 100%;
+}
+
+#products.display-list .product {
+    width: 100%;
+}
+
+#products.display-list .product-image {
+    width: 100px;
+    float: left;
+    margin-right: 15px;
+}
